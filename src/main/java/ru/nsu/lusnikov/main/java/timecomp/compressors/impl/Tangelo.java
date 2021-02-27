@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Tangelo extends MainCompressor {
 
     public Tangelo() throws Exception {
-        super("/compressors/tangelo/tangelo.exe", "tangelo", false, null, " c  " );
+        super("compressors/tangelo/tangelo.exe", "tangelo", false, null, " c  " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 

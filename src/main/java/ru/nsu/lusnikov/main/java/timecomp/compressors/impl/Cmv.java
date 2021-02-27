@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Cmv extends MainCompressor {
 
     public Cmv() throws Exception {
-        super("/compressors/cmv/CMV.exe", "cmv", true, null, " c " );
+        super("compressors/cmv/CMV.exe", "cmv", true, null, " c " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 

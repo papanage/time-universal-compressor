@@ -8,7 +8,7 @@ import java.util.Optional;
 public class Zip7 extends MainCompressor {
 
     public Zip7() throws Exception {
-        super("/compressors/7zip/7-Zip/7z.exe", "7z", false, null, " a " );
+        super("compressors/7zip/7-Zip/7z.exe", "7z", false, null, " a " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
         // System.out.println(comp);
     }

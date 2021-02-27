@@ -1,21 +1,28 @@
 package ru.nsu.lusnikov.main.java.timecomp.compressors.commons;
 
-import java.io.*;
-import java.net.URL;
-import java.nio.file.Path;
-import java.util.Optional;
+import lombok.extern.slf4j.Slf4j;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.file.Path;
+
+@Slf4j
 public abstract class Compressor implements CompressorBase {
     protected boolean isLoad = false;
     protected File comp;
 
     public Compressor(String load) throws Exception{
-       // System.out.println("try load " + getClass().getName()+ "...");
-        comp =  Optional.ofNullable(getClass().getResource(load)).
-                map(URL::getFile).
-                map(File::new).
-                orElseThrow(Exception::new);
-       // System.out.println("success load " + getClass().getName());
+        log.trace("try load " + getClass().getName()+ "...");
+//        comp =  Optional.ofNullable(getClass().getResource(load)).
+//                map(URL::getFile).
+//                map(File::new).
+//                orElseThrow(Exception::new);
+
+        comp = new File(load).getAbsoluteFile();
+       log.trace("success load " + comp.toString());
         isLoad = true;
     }
 

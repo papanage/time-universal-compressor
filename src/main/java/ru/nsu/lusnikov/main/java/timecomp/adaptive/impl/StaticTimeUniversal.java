@@ -55,7 +55,7 @@ public class StaticTimeUniversal extends TimeUniversalCompressorAPI {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        log.debug("Выбо окончен, выбран: " + chosen.compressorBase.toString());
+        log.debug("Выбор окончен, выбран: " + chosen.compressorBase.toString());
         return chosen.compressorBase;
     }
 

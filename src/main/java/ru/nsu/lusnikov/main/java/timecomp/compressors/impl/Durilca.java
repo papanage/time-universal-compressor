@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class Durilca extends MainCompressor {
 
     public Durilca() throws Exception {
-        super("/compressors/durilca/DURILCA.exe", "dur", false, new File("resources/compressors/durilca/"), " e " );
+        super("compressors/durilca/DURILCA.exe", "dur", false, new File("resources/compressors/durilca/"), " e " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 

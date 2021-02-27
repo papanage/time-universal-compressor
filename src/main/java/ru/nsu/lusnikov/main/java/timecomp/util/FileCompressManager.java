@@ -61,7 +61,6 @@ public class FileCompressManager {
             }
         }
         log.trace("");
-       // System.out.println();
         service.shutdown();
         compressFiles.sort((x,y)-> compare(x.file, y.file));
         return compressFiles;
@@ -93,7 +92,6 @@ public class FileCompressManager {
                 throw new IllegalArgumentException();
             }
             FileOutputStream outputStream = new FileOutputStream(part);
-
             FileInputStream inputStream = new FileInputStream(file.toFile());
 
             int size = (int)(percent*file.toFile().length());

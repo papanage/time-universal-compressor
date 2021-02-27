@@ -13,7 +13,7 @@ public class Paq8f32 extends MainCompressor {
     }
 
     public Paq8f32() throws Exception {
-        super("/compressors/paq8f/paq8f.exe", "paq8f", true, null, " " );
+        super("compressors/paq8f/paq8f.exe", "paq8f", true, null, " " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 

@@ -23,16 +23,11 @@ public class TimeUniversalyCompressor {
 
         Vector<CompressorBase> compressor = new Vector<>();
 
-
-
         compressor.add(new NanoZip());
         compressor.add(new Lpaq8());
         compressor.add(new Mcm());
         compressor.add(new Tangelo());
         compressor.add(new Zip7());
-
-
-
 
         Vector<Double> per = new Vector<>();
         per.add(0.01);

@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Fp8 extends MainCompressor {
 
     public Fp8() throws Exception {
-        super("/compressors/fp8/fp8.exe", "fp8", true, null, " " );
+        super("compressors/fp8/fp8.exe", "fp8", true, null, " " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 

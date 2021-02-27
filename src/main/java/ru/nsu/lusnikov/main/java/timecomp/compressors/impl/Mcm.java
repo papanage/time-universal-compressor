@@ -7,7 +7,7 @@ import java.util.Optional;
 public class Mcm extends MainCompressor {
 
     public Mcm() throws Exception {
-        super("/compressors/msm/mcm.exe", "mcm", true, null, " -x11 " );
+        super("compressors/msm/mcm.exe", "mcm", true, null, " -x11 " );
         if (Optional.ofNullable(comp).isPresent()) isLoad = true;
     }
 
